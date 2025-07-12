@@ -7,26 +7,33 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- form background video -->
+  <video autoplay muted loop id="bgVideo">
+  <source src="T:\DOWNLOADS\3752539-hd_1920_1080_24fps.mp4" type="video/mp4">
+  <source src="T:\DOWNLOADS\3752539-hd_1920_1080_24fps.webm" type="video/webm">
+  Your browser does not support HTML5 video.
+</video>
+
 
   <div class="container">
     <h2>Bank Account Opening Form</h2>
    
 
       <label >Full Name:</label>
-      <input type="text" name="fullName" id="fullName"><br><br>
+      <input type="text" name="fullName" id="fullName" placeholder="Tarun"><br>
 
       <label>Father’s / Mother’s Name:</label>
-      <input type="text" name="parentName" id="fmName"><br><br>
+      <input type="text" name="parentName" id="fmName" placeholder="Durga"><br>
 
       <label>Date of Birth:</label>
-      <input type="date" name="dob" id="dob"><br><br>
+      <input type="date" name="dob" id="dob"><br>
 
       <label>Gender:</label>
       <div class="radio-group" >
         <input type="radio" name="gender" value="male" required> Male<br>
         <input type="radio" name="gender" value="female" required> Female<br>
         <input type="radio" name="gender" value="other" required> Other<br>
-      </div><br><br>
+      </div><br>
 
       <label>Marital Status:</label>
       <select name="maritalStatus">
@@ -34,31 +41,31 @@
         <option value="married">Married</option>
         <option value="divorced">Divorced</option>
         <option value="widowed">Widowed</option>
-      </select><br><br>
+      </select><br>
 
       <label>Nationality:</label>
-      <input type="text" name="nationality" id="nationality"><br><br>
+      <input type="text" name="nationality" id="nationality" placeholder="eg. indian"><br>
 
       <label>Occupation / Profession:</label>
-      <input type="text" name="occupation" id="Profession"><br><br>
+      <input type="text" name="occupation" id="Profession" placeholder="eg. farmer,police,lawyer,engineer"><br>
 
       <label>Permanent Address:</label>
-      <textarea name="permanentAddress" rows="3" id="permanentAddress"></textarea><br><br>
+      <textarea name="permanentAddress" rows="3" id="permanentAddress"></textarea><br>
 
       <label>Current Address:</label>
-      <textarea name="currentAddress" rows="3" id="currentAddress"></textarea><br><br>
+      <textarea name="currentAddress" rows="3" id="currentAddress"></textarea><br>
 
       <label>Mobile Number:</label>
-      <input type="tel" name="mobile" pattern="[0-9]{10}" placeholder="10-digit number" id="mobile"><br><br>
+      <input type="tel" name="mobile" pattern="[0-9]{10}" placeholder="10-digit number" id="mobile"><br>
 
       <label>Email Address:</label>
-      <input type="email" name="email" id="email"><br><br>
+      <input type="email" name="email" id="email" placeholder="e.g., john.doe@example.com"><br>
 
       <label>Aadhaar / National ID Number:</label>
-      <input type="text" name="aadhaar" id="aadhaar"><br><br>
+      <input type="text" name="aadhaar" id="aadhaar"><br>
 
       <label>PAN / Tax Identification Number:</label>
-      <input type="text" name="pan" id="pan"><br><br>
+      <input type="text" name="pan" id="pan" placeholder="eg. abcde1234f"><br>
 
       <label>Type of ID Submitted:</label>
       <select name="idType">
@@ -66,10 +73,10 @@
         <option>Passport</option>
         <option>Driver’s License</option>
         <option>Voter ID</option>
-      </select><br><br>
+      </select><br>
 
       <label>Photograph:</label>
-      <input type="file" name="photo" id="photo"><br><br>
+      <input type="file" name="photo" id="photo"><br>
 
       <label>Type of Account:</label>
       <select name="accountType">
@@ -77,27 +84,39 @@
         <option>Current</option>
         <option>Fixed Deposit</option>
         <option>Recurring Deposit</option>
-      </select><br><br>
+      </select><br>
 
       <label>Initial Deposit Amount (INR):</label>
-      <input type="number" name="initialDeposit" min="0" step="any" id="INR"><br><br>
+      <input type="number" name="initialDeposit" min="0" step="any" id="INR"><br>
 
       <label>Mode of Operation:</label>
       <select name="modeOperation">
         <option>Single</option>
         <option>Joint</option>
         <option>Either or Survivor</option>
-      </select><br><br>
+      </select><br>
 
       <label>Nominee Name:</label>
-      <input type="text" name="nomineeName" id="Nominee"><br><br>
+      <input type="text" name="nomineeName" id="nomineeName" placeholder="e.g., Rajesh Kumar"><br>
 
       <label>Nominee Relationship:</label>
-      <input type="text" name="nomineeRelation" id="nomineeRelation"><br><br>
+      <select name="nomineeRelation" id="nomineeRelation">
+        <option value="">-- Select Relationship --</option>
+        <option value="Father">Father</option>
+        <option value="Mother">Mother</option>
+        <option value="Spouse">Spouse</option>
+        <option value="Son">Son</option>
+        <option value="Daughter">Daughter</option>
+        <option value="Brother">Brother</option>
+        <option value="Sister">Sister</option>
+        <option value="Friend">Friend</option>
+        <option value="Other">Other</option>
+      </select>
+<br>
 
       <div class="checkbox-group">
-        <label><input type="checkbox" required> I hereby declare that the information provided is true and correct.</label><br>
-        <label><input type="checkbox" required> I agree to the bank’s terms and conditions.</label><br><br>
+        <label><input type="checkbox" id="declaration" required> I hereby declare that the information provided is true and correct.</label><br>
+        <label><input type="checkbox" id="terms" required> I agree to the bank’s terms and conditions.</label><br>
       </div>
 
       <button  onclick="validateForm()">Submit Application</button>

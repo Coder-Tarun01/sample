@@ -85,13 +85,15 @@ body {
   margin-top: 40px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.3);
   */
-
-
 .radio-group{
   display: flex;
   flex-direction: row;
 }
 
+input[type="radio"] {
+  width: 20px;      /* increase size */
+  height: 20px;     /* increase size */
+}
 select {
   width: 100%; /* or use px like 300px */
 }

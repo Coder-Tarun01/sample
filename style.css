@@ -51,6 +51,7 @@ body {
       font-size: 16px;
       border-radius: 4px;
       cursor: pointer;
+      width: 100%;
     }
 
     button:hover {
@@ -59,7 +60,7 @@ body {
 
 
 
-    /* Background video styling */
+    /* Background video styling
 #bgVideo {
   position: fixed;
   top: 0;
@@ -68,21 +69,22 @@ body {
   min-height: 100%;
   object-fit: cover;
   z-index: -1;
-  opacity: 0.7; /* adjust for contrast */
-}
+  opacity: 0.7; /* adjust for contrast
+  } */
 
-/* Form container stays above the video */
-.container {
+
+/*Form container stays above the video*/
+/* .container {
   position: relative;
   z-index: 1;
-  background-color: rgba(255, 255, 255, 0.85); /* optional: semi-transparent bg */
+  background-color: rgba(255, 255, 255, 0.85);
   padding: 30px;
   border-radius: 10px;
   max-width: 600px;
   margin: auto;
   margin-top: 40px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-}
+  */
 
 
 .radio-group{
@@ -92,4 +94,30 @@ body {
 
 select {
   width: 100%; /* or use px like 300px */
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-image: url("images/image\(1\).jpeg"); /* adjust path if needed */
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* keeps background fixed during scroll */
+  overflow-y: auto;
+  font-family: Arial, sans-serif;
+}
+
+
+.container {
+  background-color: rgba(216, 210, 210, 0.916);
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 620px;
+  margin: auto;
+  margin-top: 40px;
+  box-shadow: 0 4px 12px rgba(212, 204, 204, 0.3);
+  
 }

@@ -45,7 +45,7 @@ const dobField = document.getElementById("dob");
   const dobValue = dobField.value;
 
   if (dobValue === "") {
-    Error(dobField, "Please enter your date of birth");
+    Error(dobField, "Please enter your date of birth & age must be 18 or above/ignore if you enter correctly");
   } else {
     const today = new Date();
     const dob = new Date(dobValue);
@@ -264,18 +264,6 @@ function removeErrorIfValid(field) {
   }
 }
 
-// Enable live validation after DOM loads
-function enableLiveValidation() {
-  const fields = document.querySelectorAll("input, select, textarea");
-
-  fields.forEach(field => {
-    field.addEventListener("input", () => {
-      removeErrorIfValid(field);
-    });
-    field.addEventListener("change", () => {
-      removeErrorIfValid(field);
-    });
-  });
 
   // Gender radio group error removal
   document.querySelectorAll("input[name='gender']").forEach(radio => {
@@ -295,6 +283,22 @@ function enableLiveValidation() {
       if (next && next.classList.contains("warning")) next.remove();
     });
   });
+
+
+    
+  // Enable live validation after DOM loads
+function enableLiveValidation() {
+  const fields = document.querySelectorAll("input, select, textarea");
+
+  fields.forEach(field => {
+    field.addEventListener("input", () => {
+      removeErrorIfValid(field);
+    });
+    field.addEventListener("change", () => {
+      removeErrorIfValid(field);
+    });
+  });
+
 }
 
 // Run on page load
